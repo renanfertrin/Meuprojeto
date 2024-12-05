@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Comunicação</title>
+    <style>
+        /* Seu CSS permanece o mesmo */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00008B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .app-container {
+            width: 500px;
+            height: 900px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow-y: scroll;
+        }
+
+        .image-container {
+            width: 48%;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .info h1 {
+            font-size: 24px;
+            color: #f0f0f0;
+        }
+
+        .info p {
+            font-size: 16px;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="info">
+        <h1>Fala Fácil</h1>
+        <p>V.01</p>
+    </div>
+
+    <!-- Imagens e áudios -->
+    <div class="image-container" onclick="playAudio('audio1')">
+        <img src="imagens/1.Comer.jfif" alt="Comer">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio2')">
+        <img src="imagens/2.Agua.avif" alt="Beber água">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio3')">
+        <img src="imagens/3.Sono.jfif" alt="Sono">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio4')">
+        <img src="imagens/4.Brincar.jpg" alt="Brincar">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio5')">
+        <img src="imagens/5.Dor.jfif" alt="Dor">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio6')">
+        <img src="imagens/6.Privada.png" alt="Ir ao banheiro">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio7')">
+        <img src="imagens/7.Estudar.jfif" alt="Estudar">
+    </div>
+
+    <div class="image-container" onclick="playAudio('audio8')">
+        <img src="imagens/8.Embora.png" alt="Ir embora">
+    </div>
+</div>
+
+<!-- Áudios -->
+<audio id="audio1" src="audios/Quero%20comer.mp3"></audio>
+<audio id="audio2" src="audios/Estou%20com%20sede.mp3"></audio>
+<audio id="audio3" src="audios/Estou%20com%20sono.mp3"></audio>
+<audio id="audio4" src="audios/Quero%20brincar.mp3"></audio>
+<audio id="audio5" src="audios/Estou%20com%20dor.mp3"></audio>
+<audio id="audio6" src="audios/Quero%20ir%20ao%20banheiro.mp3"></audio>
+<audio id="audio7" src="audios/Hora%20de%20estudar.mp3"></audio>
+<audio id="audio8" src="audios/Hora%20de%20ir%20embora.mp3"></audio>
+
+<script>
+    function playAudio(audioId) {
+        const audio = document.getElementById(audioId);
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
